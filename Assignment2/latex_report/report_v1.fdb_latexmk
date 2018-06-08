@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1528435776 "article_2.tex" "article_2.pdf" "article_2" 1528435777
+["pdflatex"] 1528437948 "report_v1.tex" "report_v1.pdf" "report_v1" 1528437949
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1480098688 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
@@ -106,14 +106,15 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1526027997 4220280 8738613a74b93f4309353f75b2519ec0 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "acc_loss.png" 1528428468 100801 50644b19573c276973afaf767f545377 ""
-  "article_2.aux" 1528435777 4275 7b996eaca71b6d63886fac916b217791 ""
-  "article_2.out" 1528435777 1559 46611a0f59270fdd56448637e46ef4a3 ""
-  "article_2.tex" 1528430962 21682 63539e9ab922465a2cab46d133da6b67 ""
+  "acc_loss.png" 1528436265 99298 252fdbf6fdb16239c0a527880f1e38f0 ""
+  "confusion_matrix.png" 1528436235 241321 ad48ac68bce13f880e6679a2c5d53c03 ""
   "model_detail.png" 1528427922 267882 e8bc0a9e12142b9950a575ba243d46fa ""
+  "report_v1.aux" 1528437949 5046 1e4fd62c2477ab4e306b3ec8d382cc17 ""
+  "report_v1.out" 1528437949 1644 a116abe123bd60ed6753b6736a95dbda ""
+  "report_v1.tex" 1528437947 23547 9903bbdc9462d2e457b199bb31d8cc78 ""
   "wront_pic_ana.png" 1528399975 46255 0772c26bebc97bf7ada30518d564191f ""
   (generated)
-  "article_2.log"
-  "article_2.out"
-  "article_2.aux"
-  "article_2.pdf"
+  "report_v1.aux"
+  "report_v1.out"
+  "report_v1.log"
+  "report_v1.pdf"

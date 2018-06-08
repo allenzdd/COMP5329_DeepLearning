@@ -1,0 +1,24 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Related work}{}% 2
+\BOOKMARK [1][-]{section.3}{Technique}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Convolutional neural network}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Activation function}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Softmax and cross entropy loss}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Adam}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Dropout}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.6}{Weight decay}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.7}{Data augmentation}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Experiments and results}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Result}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.2}{Extensive analysis}{section.4}% 13
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Data augmentation analysis}{subsection.4.2}% 14
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Learning decay analysis}{subsection.4.2}% 15
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Feature-wise standard normalisation analysis}{subsection.4.2}% 16
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Confusion matrix analysis}{subsection.4.2}% 17
+\BOOKMARK [3][-]{subsubsection.4.2.5}{Wrong prediction analysis}{subsection.4.2}% 18
+\BOOKMARK [3][-]{subsubsection.4.2.6}{Upper and lower character}{subsection.4.2}% 19
+\BOOKMARK [3][-]{subsubsection.4.2.7}{Number and character}{subsection.4.2}% 20
+\BOOKMARK [3][-]{subsubsection.4.2.8}{Improvement}{subsection.4.2}% 21
+\BOOKMARK [1][-]{section.5}{Discussion and conclusion}{}% 22
+\BOOKMARK [2][-]{subsection.5.1}{Discussions}{section.5}% 23
+\BOOKMARK [2][-]{subsection.5.2}{Conclusions}{section.5}% 24

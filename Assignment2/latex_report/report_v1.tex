@@ -76,7 +76,6 @@
 \author[2]{Quan Chen}
 \author[3]{Rui Wang}
 
-%\author[2]{Corresponding Author\thanks{email@2nduniversity.com}}
 \affil[1,2,3]{University of Sydney}
 {	
     \makeatletter
@@ -115,7 +114,7 @@ Computer vision has always been a trending filed in deep learning. The main prob
 
 \section{Introduction}
 
-\lettrine[nindent=0em,lines=3]{C}{}lassifying images of different classes has always been a trending problem in deep learning. This problem requires a discrimination of images among many classes. It is important because it can be applied in many fields. For instance, face recognition can be utilized in public security. it can also help classify disease in medical industry. All of these applications require a mass of images as input and then classify the images into several classes. Convolutional neural network has drawn extensive attention on computer vision classification since it produces state-of-art performance. The classification using convolutional neural network has been proved to be extremely effective computer vision. Today, most of the framework relies on powerful convolutional neural network [1]. Therefore, it is important to understand how to classify images using convolutional neural network. 
+\lettrine[nindent=0em,lines=3]{C}{}lassifying images of different classes has always been a trending problem in deep learning. This problem requires a discrimination of images among many classes. It is important because it can be applied in many fields. For instance, face recognition can be utilized in public security. it can also help classify disease in medical industry. All of these applications require a mass of images as input and then classify the images into several classes. Convolutional neural network has drawn extensive attention on computer vision classification since it produces state-of-art performance. The classification using convolutional neural network has been proved to be extremely effective computer vision. Today, most of the framework relies on powerful convolutional neural network \cite{R1}.. Therefore, it is important to understand how to classify images using convolutional neural network. 
 
 
 \noindent In this project, we propose a convolutional neural network to finish a multi-class classification problem. Meanwhile, the shift, rotation and scaling of data augmentation are also utilized in this project.
@@ -126,7 +125,7 @@ Computer vision has always been a trending filed in deep learning. The main prob
 
 \section{Related work}
 
-Image classification has always been a trending problem in deep learning. Many approaches have been utilized to address this problem. Traditional machine learning algorithms such as support vector machine, k-nearest neighbors and Naïve-Bayes classifier can be utilized to address this problem. Preprocessing might be necessary to transform the image into data matrix. A remarkable convolutional neural network was proposed in 2012, typically known as AlexNet [1]. It utilized 5 convolutional layers and 3 fully connected layers and got state-of-art results at that time. In 2015, another milestone network known as VGG was created [2]. This is one of the most commonly used convolutional neural network.
+Image classification has always been a trending problem in deep learning. Many approaches have been utilized to address this problem. Traditional machine learning algorithms such as support vector machine, k-nearest neighbors and Naïve-Bayes classifier can be utilized to address this problem. Preprocessing might be necessary to transform the image into data matrix. A remarkable convolutional neural network was proposed in 2012, typically known as AlexNet [1]. It utilized 5 convolutional layers and 3 fully connected layers and got state-of-art results at that time. In 2015, another milestone network known as VGG was created \cite {R2}. This is one of the most commonly used convolutional neural network.
 % \begin{itemize}
 % \item Donec dolor arcu, rutrum id molestie in, viverra sed diam
 % \item Curabitur feugiat
@@ -168,7 +167,7 @@ The modules of a convolutional neural network usually are convolutional layer, p
 \begin{figure}[h]
 \includegraphics[width=8cm]{model_detail.png}
 \centering
-\caption{Model detail}\label{fig3}
+\caption{Model detail}\label{fig1}
 \end{figure}
 
 
@@ -181,7 +180,7 @@ ReLU activation function is an extensively used activation function in machine l
 f(x) = max(0,x)
 \end{equation}
 
-\noindent where $max(0,x)$ indicates the maximum value between 0 and x. ReLU function is one sided and can be used to avoid gradient vanishing problem where at some point, the gradient of the activation function becomes 0. Nevertheless, ReLU function indicates that the negative values of input are treated as 0s, which means some neurons will be dead. In our design, ReLU is chosen as the in the convolutional layers. [3]
+\noindent where $max(0,x)$ indicates the maximum value between 0 and x. ReLU function is one sided and can be used to avoid gradient vanishing problem where at some point, the gradient of the activation function becomes 0. Nevertheless, ReLU function indicates that the negative values of input are treated as 0s, which means some neurons will be dead. In our design, ReLU is chosen as the in the convolutional layers. \cite{R3}
 %------------------------------------------------
 
 \subsection{Softmax and cross entropy loss}
@@ -201,7 +200,7 @@ the target classes. The one with highest probability indicates the resulted labe
 J(\mathbf{t,z})=-\sum_{k=1}^{C}t_klog(z_k)
 \end{equation}
 
-\noindent results a better performance. [3]
+\noindent results a better performance. \cite{R3}
 
 \subsection{Adam}
 
@@ -238,18 +237,17 @@ Overfitting is a common issue in deep learning. This problem means that the neur
 y_j=f((\sum_{i=1}^{d}x_iw_{ji})r_j+b_j)
 \end{equation}
 
-\noindent where $r_j$ represents the Bernoulli random variable with probability p. [3]
+\noindent where $r_j$ represents the Bernoulli random variable with probability p. \cite{R3}
 
 \subsection{Weight decay}
 
-This module is applied to address two problems: firstly, it can choose the minimum weight vector to avoid irrelevant components; secondly, it can reduce some of the static noise on the targets [4]. This can be achieved by adding penalization to large weights:
+This module is applied to address two problems: firstly, it can choose the minimum weight vector to avoid irrelevant components; secondly, it can reduce some of the static noise on the targets \cite{R4}. This can be achieved by adding penalization to large weights \cite{R3}:
 
 \begin{equation}
 \label{eq:9}
 \mathcal{L}_{new}(\textbf{w})=\mathcal{L}_{old}(\textbf{w})+\frac{1}{2}\lambda\sum_{i}w_i^2
 \end{equation}
 
-[3]
 
 \subsection{Data augmentation}
 
@@ -257,7 +255,7 @@ Data augmentation is a technique that can be utilized to reduce the effect of ov
 
 \section{Experiments and results}
 
-The dataset we utilized are images folder files that contain train-set folder within 37,883 png items, vali-set folder within 6,263 png items, and .txt files of their labels. There are 62 corresponding classes for this dataset. It contains ten roman numerals and twenty-six English letters  with upper-case and lower-case. Overall, training data is 37,883 png files with its labels, and validating data is 6,263 png files with its labels. Before implementation, the data is randomly sorted. The experiments are implemented in python3.6 running on a Ubuntu18 LTS 1080Ti, keras 2.1.6 with tensorflow-gpu backend.
+The dataset we utilized are images folder files that contain train-set folder within 37,883 png items, vali-set folder within 6,263 png items, and .txt files of their labels. There are 62 corresponding classes for this dataset. It contains ten roman numerals and twenty-six English letters  with upper-case and lower-case. Overall, training data is 37,883 png files with their labels, and validating data is 6,263 png files with their labels. Before implementation, the data is randomly sorted. The experiments are implemented in python3.6 running on a Ubuntu18 LTS 1080Ti, keras 2.1.6 with tensorflow-gpu backend.The total training time will be approximately 90 minutes. 
 
 \subsection{Result}
 
@@ -265,7 +263,7 @@ The dataset we utilized are images folder files that contain train-set folder wi
 
 \begin{figure}[h]
 \includegraphics[width=8cm]{acc_loss.png}
-\caption{Loss and Accuracy trend}\label{fig1}
+\caption{Loss and Accuracy trend}\label{fig2}
 \centering
 \end{figure}
 
@@ -277,19 +275,42 @@ The dataset we utilized are images folder files that contain train-set folder wi
 % \end{figure}
 
 
-\noindent Our best accuracy is 92.13\% which means 493 prediction is wrong. The parameters we use 5e-4, drop rate is 0.3, 0.2, 0.1. Rotation\_range = 12, width\_shift\_range = 0.05, height\_shift\_range = 0.05, zoom\_range = 0.05. Batch size is 256, 200 epochs.
+\noindent Our best accuracy is 92.13\% which means 493 predictions are wrong. The parameters we use is 5e-4, drop rate is 0.3, 0.2, 0.1. Rotation\_range = 12, width\_shift\_range = 0.05, height\_shift\_range = 0.05, zoom\_range = 0.05. Batch size is 256, 200 epochs.
 
 
 \noindent Through this experiment, we develop cross entropy and softmax loss, dropout, weight decay, augmentation and batch normalization.
 
 
-\noindent Due to the label is English letters and roman numerals, it is 62 classes, we translate it to one-hot representation. In those whole process, we applied idea --> code --> experiment cycle to make all experiment and make table to record each result in order to adjust parameters. 
+\noindent Since the labels are English letters and roman numerals, there are 62 classes, we translate it to one-hot representation. In those whole process, we applied idea --> code --> experiment cycle to make all experiment and make table to record each result in order to adjust parameters. 
 We select train-set folder png files for training data, and vali-set folder png files for testing data. There are experiment detailed results and analysis below:
 
 \subsection{Extensive analysis}
-\subsubsection{data augmentation analysis}
 
-In this experiment, we use data augmentation to increase the train data, This is essential for training because it can avoid overfitting in original train data and generalise it to the real word. Rotation, shift (height and width) and scaling is used to create more train images. 
+
+\subsubsection{Data augmentation analysis}
+
+
+\begin{table*}[h]
+\caption{Comparsion of different parameters}
+\centering
+\begin{tabular}{c c c c c c}
+\hline
+Data augmentation & Learning rate & Learning rate decay & Epoch & RT,WS,HS,ZR & Accuracy\\
+\hline
+F & 0.0005 & F & 60 & 10, 0.03, 0.03, 0.01 & 90.36\% \\
+T & 0.0005 & F & 60 & 10, 0.03, 0.03, 0.01 & 91.36\% \\
+T & 0.0005 & F & 80 & 12, 0.05, 0.05, 0.05 & 91.60\% \\
+T & 0.0005 & T & 200 & 12, 0.05, 0.05, 0.05 & 92.13\% \\
+\hline
+\end{tabular}
+
+RT = Rotation range, WS = Width shift, HS = Hight shift , ZR = Zoom rate
+Batch size is 256
+
+\label{table:1}
+\end{table*}
+
+In this experiment, we use data augmentation to increase the train data, This is essential for training because it can avoid overfitting in original train data and generalise it to the real word. Rotation, shift (height and width) and scaling is used to create more train images, the comparision table as Table 1. 
 
 
 \noindent Rotation is important due to some of images’ character is italic and is not on the center. When we use this function in our model, accuracy will improve at least 1\% when using same epochs. 
@@ -298,18 +319,30 @@ In this experiment, we use data augmentation to increase the train data, This is
 \noindent When using data augmentation, in the first epoch we can get 80\% accuracy for validation data while the average score in our batch train data is around30\%. The reason is that data augmentation add more images to train data and more features need to be learned. After closing data augmentation  methods, the train accuracy and validation accuracy is close. Validation accuracy is small than train accuracy. 
 
 
+
 \subsubsection{Learning decay analysis}
 Without Learning decay in Adam, validation accuracy will improve quickly and oscillation heavily around 89\% accuracy. By using Learning decay, the validation accuracy line is more smooth and can achieve a better result.
 
 \subsubsection{Feature-wise standard normalisation analysis}
 When use Feature-wise standard normalisation, we find the accuracy is around 2\% and cannot come to convergence. This is not applied because the pixel is 0 and 1 because it will lose the essential and original information of train image. Rotation range is set to 12 and it cannot be lager due to the chapter is sensitive for angle and flip. We have set flip and rotation parameter to 40 and find accuracy cannot come to convergence. 
 
+
+\subsubsection{Confusion matrix analysis}
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{confusion_matrix.png}
+\centering
+\caption{Confusion Matrix}\label{fig3}
+\end{figure}
+
+\noindent By predicting the validation image and comparing the result with true label in confusion matrix, it is easy to find diagonal line across the whole diagram. From the whole Confusion Matrix we can see the middle line’s colour is deep and other lines are light. It shows our model do well in predictions to some extend. The upper and lower line is symmetrical and intuitive, it shows that our model’s error mainly comes from wrongly prediction between lowercase and uppercase of one character. Some of the outlier points which not located in those three line shows the second error comes from the wrongly prediction between number and character (such as ‘1’ and ‘I’).
+
 \subsubsection{Wrong prediction analysis}
 
 \begin{figure}[h]
 \includegraphics[width=8cm]{wront_pic_ana.png}
 \centering
-\caption{Wrong predict example}\label{fig3}
+\caption{Wrong predict example}\label{fig4}
 \end{figure}
 
 \begin{table}[h]
@@ -334,19 +367,20 @@ c—>C & 15 \\
 v—>V & 15 \\
 \hline
 \end{tabular}
+\label{table:1}
 \end{table}
 
-\noindent We have counted the wrong prediction for our system. From some of the predicted label and true label with correspond to the image, we find some of image is really weird. For example:
+\noindent We have counted the wrong prediction for our system. From some of the predicted label and true label with correspond to the image, we find some of image is really weird. Pleas look at Figure 4 and Table 2:
 
 \subsubsection{Upper and lower character}
 
-o->O, V->v, s->S, Z->z, C->c, X->x etc. It's really hard to discriminate those pictures for our system. Zoom methods will be reconsidered carefully. 
+Such as o->O, V->v, s->S, Z->z, C->c, X->x etc. It's really hard to discriminate those pictures for our system. Zoom methods will be reconsidered carefully. 
 
 \subsubsection{Number and character}
 
-number ‘0’ and character ‘O’, number ‘9’ and character ‘q’, number ‘1’ and character ‘I’ and ‘i’ is really hard to discriminate.
+\noindent Number ‘0’ and character ‘O’, number ‘9’ and character ‘q’, number ‘1’ and character ‘I’ and ‘i’ is really hard to discriminate.
 
-\noindent We have check some of the most wrong predicted label and find it is very hard to distinguish them even by human. Maybe this can be solved to develop more deep neural network to capture more details.
+\noindent We checked some of the most wrong predicted label and find it is very hard to distinguish them even by human. Maybe this can be solved to develop more deep neural network to capture more details.
 
 \subsubsection{Improvement}
 
@@ -380,20 +414,23 @@ During our work on the image classification, we experienced the process of build
 
 % \blindtext % Dummy text
 
-% %----------------------------------------------------------------------------------------
-% %	REFERENCE LIST
-% %----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
 
-% \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
 
-% \bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-% Figueredo, A.~J. and Wolf, P. S.~A. (2009).
-% \newblock Assortative pairing and life history strategy - a cross-cultural
-%   study.
-% \newblock {\em Human Nature}, 20:317--330.
+\bibitem [1]{R1}
+A. Krizhevsky, I. Sutskever, and G. E. Hinton. Imagenet classification with deep convolutional neural networks. In NIPS, pages 1106–1114, 2012.
+\bibitem [2]{R2}
+K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. In ICLR, pages 1409–1556, 2015.
+\bibitem [3]{R3}
+D. Zhang, Q. Chen and R. Wang. Deep learning assignment 1 of the University of Sydney. 2018.
+\bibitem [4]{R4}
+A. Krough and J. Hertz. A Simple Weight Decay Can Improve Generalization. In NIPS, 1991.
  
-% \end{thebibliography}
+\end{thebibliography}
 
-% %----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
 
 \end{document}
