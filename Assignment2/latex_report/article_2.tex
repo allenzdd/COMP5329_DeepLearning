@@ -19,9 +19,8 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[twoside,twocolumn]{article}
+\documentclass[twoside,twocolumn,10.8pt]{article}
 
-\usepackage{blindtext} % Package to generate dummy text throughout this template 
 \usepackage{graphicx}
 
 \usepackage[sc]{mathpazo} % Use the Palatino font
@@ -31,7 +30,7 @@
 
 \usepackage[english]{babel} % Language hyphenation and typographical rules
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=25pt, margin=0.9in]{geometry} % Document margins
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=25pt, margin=0.85in]{geometry} % Document margins
 \usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
 \usepackage{booktabs} % Horizontal rules in tables
 
@@ -55,7 +54,8 @@
 \fancyhead{} % Blank out the default header
 \fancyfoot{} % Blank out the default footer
 \fancyhead[C]{COMP5329 Deep Learning$\bullet$ Assignment 2 $\bullet$ report} % Custom header text
-\fancyfoot[RO,LE]{\thepage} % Custom footer text
+\renewcommand{\headrulewidth}{1pt}
+\fancyfoot[C]{\thepage} % Custom footer text
 
 \usepackage{titling} % Customizing the title section
 
@@ -66,10 +66,11 @@
 %----------------------------------------------------------------------------------------
 
 \setlength{\droptitle}{-4\baselineskip} % Move the title up
+\setlength{\parskip}{0.5em}
 
 \pretitle{\begin{center}\Huge\bfseries} % Article title formatting
 \posttitle{\end{center}} % Article title closing formatting
-\title{Article Title} % Article title
+\title{COMP5329 Assingment2} % Article title
 \usepackage{authblk}
 \author[1]{Dongdong Zhang}
 \author[2]{Quan Chen}
@@ -117,9 +118,9 @@ Computer vision has always been a trending filed in deep learning. The main prob
 \lettrine[nindent=0em,lines=3]{C}{}lassifying images of different classes has always been a trending problem in deep learning. This problem requires a discrimination of images among many classes. It is important because it can be applied in many fields. For instance, face recognition can be utilized in public security. it can also help classify disease in medical industry. All of these applications require a mass of images as input and then classify the images into several classes. Convolutional neural network has drawn extensive attention on computer vision classification since it produces state-of-art performance. The classification using convolutional neural network has been proved to be extremely effective computer vision. Today, most of the framework relies on powerful convolutional neural network [1]. Therefore, it is important to understand how to classify images using convolutional neural network. 
 
 
-In this project, we propose a convolutional neural network to finish a multi-class classification problem. Meanwhile, the shift, rotation and scaling of data augmentation are also utilized in this project.
+\noindent In this project, we propose a convolutional neural network to finish a multi-class classification problem. Meanwhile, the shift, rotation and scaling of data augmentation are also utilized in this project.
 
-The rest of the report is organized as follows. Section 2 reviews the related work on image classification. Section 3 introduces techniques. Section 4 describes the experiment and the results, followed by discussions and conclusions in section 5. The appendix section describes how to run our code. 
+\noindent The rest of the report is organized as follows. Section 2 reviews the related work on image classification. Section 3 introduces techniques. Section 4 describes the experiment and the results, followed by discussions and conclusions in section 5. The appendix section describes how to run our code. 
 
 %------------------------------------------------
 
@@ -162,7 +163,7 @@ In this section, we will introduce the proposed structure of the convolutional n
 \subsection{Convolutional neural network}
 The modules of a convolutional neural network usually are convolutional layer, pooling layer and fully connected layer. Convolutional layer assigns a convolution operation to the input image. More specifically, filters with some size (usually 2x2) are used to extract features. Pooling layer can extract the combination of outputs of neurons at on layer to into a single neuron in the next layer. For instance, max pooling takes the maximum value of the neurons of a cluster from prior layer. Fully connected layer can connect the neurons from one layer to the neurons in another layer. in our design, it has the same function as dense layer. 
 
-Given the input data X, we feed it into a convolutional neural network as the input layer. The structure of the whole network is shown in Figure 1. As the figure indicates, the network utilizes two convolutional layers and max pooling layers. Then the output is fed into dropout layer to avoid overfitting. Next, densely connected layers are utilized to get the final output.
+\noindent Given the input data X, we feed it into a convolutional neural network as the input layer. The structure of the whole network is shown in Figure 1. As the figure indicates, the network utilizes two convolutional layers and max pooling layers. Then the output is fed into dropout layer to avoid overfitting. Next, densely connected layers are utilized to get the final output.
 
 \begin{figure}[h]
 \includegraphics[width=8cm]{results_exp.png}
@@ -279,22 +280,26 @@ The dataset we utilized are images folder files that contain train-set folder wi
 % \end{figure}
 
 
-Our best accuracy is 92.13\% which means 493 prediction is wrong. The parameters we use 5e-4, drop rate is 0.3, 0.2, 0.1. Rotation\_range = 12, width\_shift\_range = 0.05, height\_shift\_range = 0.05, zoom\_range = 0.05. Batch size is 256, 200 epochs.
+\noindent Our best accuracy is 92.13\% which means 493 prediction is wrong. The parameters we use 5e-4, drop rate is 0.3, 0.2, 0.1. Rotation\_range = 12, width\_shift\_range = 0.05, height\_shift\_range = 0.05, zoom\_range = 0.05. Batch size is 256, 200 epochs.
 
-Through this experiment, we develop cross entropy and softmax loss, dropout, weight decay, augmentation and batch normalization.
 
-Due to the label is English letters and roman numerals, it is 62 classes, we translate it to one-hot representation. In those whole process, we applied idea --> code --> experiment cycle to make all experiment and make table to record each result in order to adjust parameters. 
+\noindent Through this experiment, we develop cross entropy and softmax loss, dropout, weight decay, augmentation and batch normalization.
+
+
+\noindent Due to the label is English letters and roman numerals, it is 62 classes, we translate it to one-hot representation. In those whole process, we applied idea --> code --> experiment cycle to make all experiment and make table to record each result in order to adjust parameters. 
 We select train-set folder png files for training data, and vali-set folder png files for testing data. There are experiment detailed results and analysis below:
-
 
 \subsection{Extensive analysis}
 \subsubsection{data augmentation analysis}
 
 In this experiment, we use data augmentation to increase the train data, This is essential for training because it can avoid overfitting in original train data and generalise it to the real word. Rotation, shift (height and width) and scaling is used to create more train images. 
 
-Rotation is important due to some of images’ character is italic and is not on the center. When we use this function in our model, accuracy will improve at least 1\% when using same epochs.
 
-When using data augmentation, in the first epoch we can get 80\% accuracy for validation data while the average score in our batch train data is around30\%. The reason is that data augmentation add more images to train data and more features need to be learned. After closing data augmentation  methods, the train accuracy and validation accuracy is close. Validation accuracy is small than train accuracy. 
+\noindent Rotation is important due to some of images’ character is italic and is not on the center. When we use this function in our model, accuracy will improve at least 1\% when using same epochs. 
+
+
+\noindent When using data augmentation, in the first epoch we can get 80\% accuracy for validation data while the average score in our batch train data is around30\%. The reason is that data augmentation add more images to train data and more features need to be learned. After closing data augmentation  methods, the train accuracy and validation accuracy is close. Validation accuracy is small than train accuracy. 
+
 
 \subsubsection{Learning decay analysis}
 Without Learning decay in Adam, validation accuracy will improve quickly and oscillation heavily around 89\% accuracy. By using Learning decay, the validation accuracy line is more smooth and can achieve a better result.
@@ -309,8 +314,6 @@ When use Feature-wise standard normalisation, we find the accuracy is around 2\%
 \centering
 \caption{Figure captionxxxxxxxxxxxx}\label{fig3}
 \end{figure}
-
-we counted a table and found wrong results as follow:
 
 \begin{table}[h]
 \caption{Example table}
@@ -336,7 +339,7 @@ v—>V & 15 \\
 \end{tabular}
 \end{table}
 
-We have counted the wrong prediction for our system. From some of the predicted label and true label with correspond to the image, we find some of image is really weird. For example:
+\noindent We have counted the wrong prediction for our system. From some of the predicted label and true label with correspond to the image, we find some of image is really weird. For example:
 
 \subsubsection{Upper and lower character}
 
@@ -346,7 +349,7 @@ o->O, V->v, s->S, Z->z, C->c, X->x etc. It's really hard to discriminate those p
 
 number ‘0’ and character ‘O’, number ‘9’ and character ‘q’, number ‘1’ and character ‘I’ and ‘i’ is really hard to discriminate.
 
-We have check some of the most wrong predicted label and find it is very hard to distinguish them even by human. Maybe this can be solved to develop more deep neural network to capture more details.
+\noindent We have check some of the most wrong predicted label and find it is very hard to distinguish them even by human. Maybe this can be solved to develop more deep neural network to capture more details.
 
 \subsubsection{Improvement}
 
@@ -358,7 +361,7 @@ We have check the wrong predict picture for those wrong predictions and find our
 
 During our work on the image classification, we experienced the process of building convolutional neural network to classify images. Before doing this project, we only learned the big picture of image classification from lectures. We learned the basic principles of convolutional layer, pooling layer and fully connected layer. This project helps us to implement the network and classify real world dataset. Augmentation technique is applied for the first time in our assignment to boost the performance of the network.
 
-We all consider our project to be a successful project. The entire procedure of implementation gives us the insight of how to build a convolutional neural network and why it is one of the most cutting-edge technique in image classification.
+\noindent We all consider our project to be a successful project. The entire procedure of implementation gives us the insight of how to build a convolutional neural network and why it is one of the most cutting-edge technique in image classification.
 
 \subsection{Conclusions}
 
@@ -370,29 +373,29 @@ In this project, we propose a convolutional neural network for multi-class class
 
 
 
-A statement requiring citation \cite{Figueredo:2009dg}.
+% A statement requiring citation \cite{Figueredo:2009dg}.
 
 
-\blindtext % Dummy text
+% \blindtext % Dummy text
 
-\subsection{Subsection Two}
+% \subsection{Subsection Two}
 
-\blindtext % Dummy text
+% \blindtext % Dummy text
 
-%----------------------------------------------------------------------------------------
-%	REFERENCE LIST
-%----------------------------------------------------------------------------------------
+% %----------------------------------------------------------------------------------------
+% %	REFERENCE LIST
+% %----------------------------------------------------------------------------------------
 
-\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+% \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
 
-\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-Figueredo, A.~J. and Wolf, P. S.~A. (2009).
-\newblock Assortative pairing and life history strategy - a cross-cultural
-  study.
-\newblock {\em Human Nature}, 20:317--330.
+% \bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+% Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+% \newblock Assortative pairing and life history strategy - a cross-cultural
+%   study.
+% \newblock {\em Human Nature}, 20:317--330.
  
-\end{thebibliography}
+% \end{thebibliography}
 
-%----------------------------------------------------------------------------------------
+% %----------------------------------------------------------------------------------------
 
 \end{document}
