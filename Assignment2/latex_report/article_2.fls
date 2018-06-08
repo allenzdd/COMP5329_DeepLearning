@@ -1,4 +1,4 @@
-PWD /Users/allenzhang/Desktop/COMP5329 Deep Learning/Assignment2/latex
+PWD /Users/allenzhang/Documents/GitHub/COMP5329_DeepLearning/Assignment2/latex_report
 INPUT /usr/local/texlive/2018/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
@@ -8,10 +8,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/blindtext/blindtext.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/blindtext/blindtext.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/xspace.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
@@ -187,9 +183,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/adobe/palatino/pplr9e.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
-INPUT results_exp.png
-INPUT ./results_exp.png
-INPUT ./results_exp.png
+INPUT model_detail.png
+INPUT ./model_detail.png
+INPUT ./model_detail.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/palatino/pplb9e.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/palatino/pplr9t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/palatino/pplr9t.tfm
@@ -243,17 +239,12 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/mathpazo/zplmb7t.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT model_loss.png
-INPUT ./model_loss.png
-INPUT ./model_loss.png
-INPUT model_acc.png
-INPUT ./model_acc.png
-INPUT ./model_acc.png
+INPUT acc_loss.png
+INPUT ./acc_loss.png
+INPUT ./acc_loss.png
 INPUT wront_pic_ana.png
 INPUT ./wront_pic_ana.png
 INPUT ./wront_pic_ana.png
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/palatino/pplri9e.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/adobe/palatino/pplri9e.vf
 INPUT article_2.aux
 INPUT ./article_2.out
 INPUT ./article_2.out

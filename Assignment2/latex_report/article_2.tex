@@ -31,7 +31,7 @@
 \usepackage[english]{babel} % Language hyphenation and typographical rules
 
 \usepackage[hmarginratio=1:1,top=32mm,columnsep=25pt, margin=0.85in]{geometry} % Document margins
-\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up, skip=1pt]{caption} % Custom captions under/above floats in tables or figures
 \usepackage{booktabs} % Horizontal rules in tables
 
 \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
@@ -166,9 +166,9 @@ The modules of a convolutional neural network usually are convolutional layer, p
 \noindent Given the input data X, we feed it into a convolutional neural network as the input layer. The structure of the whole network is shown in Figure 1. As the figure indicates, the network utilizes two convolutional layers and max pooling layers. Then the output is fed into dropout layer to avoid overfitting. Next, densely connected layers are utilized to get the final output.
 
 \begin{figure}[h]
-\includegraphics[width=8cm]{results_exp.png}
+\includegraphics[width=8cm]{model_detail.png}
 \centering
-\caption{Figure captionxxxxxxxxxxxx}\label{fig3}
+\caption{Model detail}\label{fig3}
 \end{figure}
 
 
@@ -264,14 +264,11 @@ The dataset we utilized are images folder files that contain train-set folder wi
 
 
 \begin{figure}[h]
-\includegraphics[width=6cm]{model_loss.png}
+\includegraphics[width=8cm]{acc_loss.png}
+\caption{Loss and Accuracy trend}\label{fig1}
 \centering
-\caption{Figure captionxxxxxxxxxxxxxxxxx}\label{fig1}
-
-\includegraphics[width=6cm]{model_acc.png}
-\centering
-\caption{Figure captionxxxxxxxxxxxxxxxxxx}\label{fig2}
 \end{figure}
+
 
 % \begin{figure}[h]
 % \includegraphics[width=8cm]{model_acc.png}
@@ -312,11 +309,11 @@ When use Feature-wise standard normalisation, we find the accuracy is around 2\%
 \begin{figure}[h]
 \includegraphics[width=8cm]{wront_pic_ana.png}
 \centering
-\caption{Figure captionxxxxxxxxxxxx}\label{fig3}
+\caption{Wrong predict example}\label{fig3}
 \end{figure}
 
 \begin{table}[h]
-\caption{Example table}
+\caption{Wrong predict example count}
 \centering
 \begin{tabular}{c|c}
 \hline
